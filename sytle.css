@@ -17,6 +17,8 @@
     --spacing-03:16px;
     --primaryButtonfill: black;
     --primaryButtonText: white;
+    --dividerFill:#e0e0e0;
+    --max-content-width:1136px;
 }
 
 
@@ -100,12 +102,35 @@ body{
     opacity: 0.8;
     text-decoration: underline;
 }
+
 .section-5{
   margin-top: 10px;
   display: flex;
   gap: var(--spacing-01);
-  align-items: end;  
+  align-items: end; 
+  align-items: center; 
 }
+.section-5__button1{
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+.bx{
+    vertical-align: top;
+    width:20px;
+    height: 20px;
+    text-align: center;
+    margin-bottom: 5px;
+    z-index: 1;
+
+}
+.line{
+  background-color: var(--dividerFill);
+  height: 22px;
+  margin: 0 var(--spacing-01);
+  width: 1px;
+}
+
 .section-5__button{
 
     background-color: var(--primaryButtonfill);
@@ -146,6 +171,10 @@ body{
     .section-2{
         margin-right: auto;
         margin-left: 25px;
+        margin-bottom: 10px;
+    }
+    .section-5__button1{
+        display: none;
     }
     .section-6,.section-3{
         display: none;
@@ -165,6 +194,20 @@ body{
     }
     .section-2{
         flex: 1;
+    }
+    
+}
+@media screen and (min-width:1184px) {
+    .container-sub{
+        box-sizing: border-box;
+        max-width: 100%;
+        width: calc(var(--max-content-width) + var(--page-margin)* 2);
+    }
+    .navbar{
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: var(--page-margin);
+        padding-right: var(--page-margin);
     }
     
 }
