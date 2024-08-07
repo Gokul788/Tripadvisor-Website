@@ -19,6 +19,7 @@
     --primaryButtonText: white;
     --dividerFill:#e0e0e0;
     --max-content-width:1136px;
+    --spacing-04:6px;
 }
 
 
@@ -67,7 +68,7 @@ body{
     height: 100%;
     max-width: 150px;
     align-items: center;
-    margin-top: 10px;
+    
 }
 .section-2 img{
     display: inline-block;
@@ -114,6 +115,8 @@ body{
     display: flex;
     align-items: center;
     margin-right: 15px;
+    padding: 10px;
+    border-radius: 40px;
 }
 .bx{
     vertical-align: top;
@@ -139,8 +142,10 @@ body{
     padding: 10px 16px;
     display: inline-block;
     position: relative;
-    
 
+}
+.section-5__button1:hover{
+    background-color: #f1f1f1;
 }
 .button__text{
     font:16px / 20px ;
@@ -159,19 +164,61 @@ body{
     align-items: end;
 }
 
+/* Scroll Bar */
+.container-2{
+    display: flex;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    flex-direction: row;
+
+}
+.container-sub2{
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+    overflow-x: auto;
+}
+.tap1{
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-01);
+    background-color: none;
+    border: none;
+    margin-left: var(--page-margin);
+    padding: var(--spacing-01) var(--spacing-01) 0;
+    margin-right: var(--spacing-01);
+    margin-top: var(--spacing-01);
+    
+}
+.tap2,.tap3{
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-01);
+    background-color: none;
+    border: none;
+    margin-left: var(--spacing-04);
+    padding: var(--spacing-01) var(--spacing-01) 0;
+    margin-right: var(--spacing-01);
+    margin-top: var(--spacing-01);
+}
 
 /* Media Quariy */
 @media screen and (max-width:768px) {
     .section-3,.section-4,.section-5{
         display: none;
     }
+    .container-2{
+        margin: var(--spacing-02) 0 var(--spacing-03);
+    }
+    
     
 }
 @media screen and (min-width:768px) and (max-width:1023px) {
     .section-2{
         margin-right: auto;
         margin-left: 25px;
-        margin-bottom: 10px;
+
     }
     .section-5__button1{
         display: none;
@@ -195,19 +242,26 @@ body{
     .section-2{
         flex: 1;
     }
+    .navbar{
+        padding-left: var(--page-margin);
+        padding-right: var(--page-margin);
+    }
     
 }
-@media screen and (min-width:1184px) {
-    .container-sub{
+@media screen and (min-width:1184px){
+    .navbar{
         box-sizing: border-box;
         max-width: 100%;
         width: calc(var(--max-content-width) + var(--page-margin)* 2);
     }
+
     .navbar{
         margin-left: auto;
         margin-right: auto;
         padding-left: var(--page-margin);
         padding-right: var(--page-margin);
     }
-    
+    .section-3{
+        margin-left: 20px;
+    }
 }
