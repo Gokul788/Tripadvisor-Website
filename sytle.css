@@ -22,13 +22,22 @@
     --spacing-04:6px;
     --spacing-05:32px;
     --brand-green:#34e0a1;
+    --spacing-06:64px;
+    --spacing-07:12px;
+    --stylecolor-01:#d4dff7;
+    --stylecolor-02:#dcc8ff;
+    --font-family-01:"Trip Sans VF", "Trip Sans", Arial, sans-serif;
+    --fontsize-01:13px;
+    --fontcolour-01:#301d49;
+    --fontsize-02:56px;
+    --fontsize-03:25px;
 }
 
 
 /* GENERAL STYLES */
 
 body{
-    font-family:"Trip Sans VF", "Trip Sans", Arial, sans-serif; ;
+    font-family:var(--font-family-01) ;
 }
 /* NAVBAR */
 .container-1{
@@ -37,11 +46,14 @@ body{
     top: 0;
     width: 100%;
     background-color: var(--primaryBackground);
+    z-index: 2;
     
 }
 .container-sub{
  padding-left: var(--page-margin);
  padding-right: var(--page-margin);
+ padding-bottom: 10px;
+ padding-top: 10px;
 }
 .navbar{
   display: flex;
@@ -269,7 +281,95 @@ body{
 
   }
   /* Main body */
+  .container-3{
+    margin-top: 45px;
+    margin-bottom: var(--spacing-06);
+
+  }
+  .container-3__sub{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .container-3__content{
+    border-end-end-radius: var(--spacing-07);
+    border-start-end-radius: var(--spacing-07);
+    border-start-start-radius: var(--spacing-07);
+    border-end-start-radius: var(--spacing-07);
+  }
+  .container-3__section-4{
+   max-width: 100%;
+   height: 230px;
+   width: 330px;
+   margin: auto;
+   display: block;
+   
+  }
+  .container-3__section-4 .one{
+    object-fit: cover;
+    overflow: clip;
+    
+  }
   
+  
+  .container-3__section-1{
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+    margin-bottom: var(--spacing-01);
+  }
+  .part-1{
+    padding: 4px;
+  }
+  .sc-1_title{
+    font-weight: 600;
+    font-family:var(--font-family-01);
+    font-size: var(--fontsize-01);
+    margin-right: var(--spacing-01);
+    color:var(--fontcolour-01);
+    
+  }
+  .part-2{
+    background-color: var(--primaryBackground);
+    padding: 4px 8px;
+    color:var(--primaryButtonfill);
+    border-radius: 4px;
+    
+
+  }
+  .sc-1_subtitle{
+    font-weight: 600;
+    font-size: 12px;
+  }
+  .sc-2_title{
+    color: var(--fontcolour-01);
+    font-size: var(--fontsize-02);
+    font-weight: 700;
+    margin-bottom: var(--spacing-01); 
+  }
+  .sc-2_subtitle{
+    font-size: var(--fontsize-03);
+    color: var(--fontcolour-01);
+    padding: 0px 10px 0px 10px;
+  }
+  .container-3__section-3{
+    display: inline-block;
+    margin-top: var(--spacing-02);
+    color: var(--primaryBackground);
+    background-color: var(--fontcolour-01);
+    padding: 12px 20px 12px 20px;
+    border-radius: 30px;
+    
+  }
+  .box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+  }
+  .bx{
+    font-size: 20px;
+    
+  }
 /* Media Quariy */
 @media screen and (max-width:768px) {
     .section-3,.section-4,.section-5{
@@ -281,7 +381,14 @@ body{
     .slide{
         display: none;
     }
-    
+    .container-3__sub{
+        text-align: center;
+        background-image: linear-gradient(90deg,var(--stylecolor-01),var(--stylecolor-02));
+        border-radius: var(--spacing-07);
+    }
+    .two{
+        display: none;
+      }
 }
 @media screen and (min-width:768px) and (max-width:1023px) {
     .section-2{
@@ -318,6 +425,7 @@ body{
         font-size: 20px;
        
     }  
+    
 }
 @media screen and (min-width:768px) {
  .section-6{
@@ -475,10 +583,44 @@ figure{
     margin-right: 10px;
     margin-top: 0;
 }
-
-
-
+.container-3{
+    padding-left: var(--page-margin);
+    padding-right: var(--page-margin);
 }
+.container-3{
+    background-image: linear-gradient(90deg,var(--stylecolor-01),var(--stylecolor-02));
+    border-radius: var(--spacing-07);
+}
+.container-3__sub{
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: center;
+}
+
+.container-3__section-4{
+    width: 100%;   
+}
+ 
+.container-3__section-4{
+    max-width: 100%;
+    height: 230px;
+    width: 330px;
+    margin: auto;
+    display: block;
+    
+   }
+   .container-3__content{
+    padding: 10px;
+    margin-left: -50px;
+   }
+    .one{
+        margin-top: 35px;
+        width: 100%;
+        margin-right: 20px;
+    }
+ }
+ 
+
 @media screen and (min-width:1024px) {
     .section-1{
         display: none;
@@ -494,6 +636,11 @@ figure{
         padding-left: var(--page-margin);
         padding-right: var(--page-margin);
         
+        
+    }
+    .container-3{
+        display: flex;
+        flex-direction: row;
         
     }
 }
@@ -527,5 +674,16 @@ figure{
 }
 .slider-1{
     margin-top: 65px;
+}
+
+.container-3{
+    box-sizing: border-box;
+        width: 100%;
+        padding-left: 105px;
+        padding-right: 18px;
+        margin-left:  auto;
+        margin-right: auto;
+        width: calc(var(--max-content-width) + var(--page-margin)* 2);
+        top: 40px;
 }
 }
