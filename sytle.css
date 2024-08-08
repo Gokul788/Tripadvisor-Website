@@ -210,7 +210,7 @@ body{
     cursor: pointer;
 }
   /* Main bar */
-  .slider{
+  .slider-1{
     margin: 0px auto;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 12px;
@@ -220,7 +220,8 @@ body{
     box-sizing: border-box;
     margin-left: 20px;
     margin-right: 20px;
-    
+
+
   }
   .search{
     width: 100%;
@@ -246,11 +247,12 @@ body{
     width: 100%;
     border: none;
     font-size: inherit;
+    outline: none;
     
   }
   .search_2{
     width: 90%;
-    margin-top: 20px;
+    margin-top: 15px;
   }
   .search_2 button{
     background-color:var(--brand-green) ;
@@ -265,8 +267,9 @@ body{
     border: none;
     font-weight: 400;
 
-    
   }
+  /* Main body */
+  
 /* Media Quariy */
 @media screen and (max-width:768px) {
     .section-3,.section-4,.section-5{
@@ -292,6 +295,29 @@ body{
     .section-6,.section-3{
         display: none;
     }
+    .slide .topic-1{
+        display: flex;
+        flex-direction: column;
+        background-color:rgba(0, 0, 0, 0.5);
+        position: absolute;
+        font-size: 2em;
+        width: 40%;
+        text-align: center;
+        margin-top: 40px;
+        color: white;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        margin-left: 35px;
+        bottom: 80px;
+        top: 20px;
+        border-radius: 30px;
+        gap: 10px;
+        padding: 5px 10px  5px 10px;
+        overflow-y: scroll;
+    }
+    .topic-1__p{
+        font-size: 20px;
+       
+    }  
 }
 @media screen and (min-width:768px) {
  .section-6{
@@ -301,13 +327,157 @@ body{
     min-width: 200px;
  }   
  .container-2{
-    margin-left: 50px auto;
-    margin-right:  50px auto;
+    
+    margin-left: auto;
+    margin-right: auto;
     width: 100%;
  } 
  .tap1,.tap2,.tap3,.tap4,.tap5,.tap6{
     font-size: 20px;
  }
+ .slider{
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow: hidden;
+    width: calc(var(--max-content-width) + var(--page-margin)* 2);
+    
+    box-shadow: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0px;
+    padding-right: 15x;
+}
+
+figure{
+    position: relative;
+    left: 10;
+    width: 400%; /* width dikali slide */
+    animation: 30s slide infinite;
+    
+}
+
+.slide{
+    position: relative;
+    width: 25%; /* width dibagi slide */
+    float: left;
+    
+    
+    
+}
+
+.slide .topic-1{
+    display: flex;
+    flex-direction: column;
+    background-color:rgba(0, 0, 0, 0.5);
+    position: absolute;
+    font-size: 2em;
+    width: 40%;
+    text-align: center;
+    margin-top: 40px;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    margin-left: 35px;
+    bottom: 80px;
+    border-radius: 30px;
+    gap: 10px;
+    padding: 5px 10px 5px 10px;
+    
+    
+    
+}
+.topic-1__p{
+    font-size: 20px;
+   
+}
+
+.slide img{
+    width: 100%;
+    height: 500px;
+    border-radius: 20px;
+}
+
+@keyframes slide{
+    0%{
+        left:0;
+    }
+    10%{
+        left:0;
+    }
+    20%{
+        left:-100%;
+    }
+    30%{
+        left:-100%;
+    }
+    40%{
+        left:-200%;
+    }
+    50%{
+        left:-200%;
+    }
+    55%{
+        left:-300%;
+    }
+    65%{
+        left:-300%;
+    }
+    66%{
+        left:-200%;
+    }
+    74%{
+        left:-200%;
+    }
+    75%{
+        left:-100%;
+    }
+    85%{
+        left:-100%;
+    }
+    90%{
+        left:0;
+    }
+    1000%{
+        left:0;
+    }
+}
+.slider-1{
+    border-radius: 50px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+}
+.search{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom:0;
+    scroll-margin: none;
+}
+.search_1{
+    display: flex;
+    width: 100%;
+    border-bottom: none;
+    padding: none;
+    margin-left: 10px;
+    padding-top: 14px;
+        
+}
+.search_2{
+    display: flex;
+    width: 15%;
+    margin-bottom: 0px;
+    margin-right: 10px;
+    margin-top: 0;
+}
+
+
+
 }
 @media screen and (min-width:1024px) {
     .section-1{
@@ -346,7 +516,7 @@ body{
     .container-2{
         box-sizing: border-box;
         width: 100%;
-        padding-left: 95px;
+        padding-left: 125px;
         padding-right: 18px;
         margin-left:  auto;
         margin-right: auto;
@@ -354,5 +524,8 @@ body{
         top: 40px;
         
 
+}
+.slider-1{
+    margin-top: 65px;
 }
 }
