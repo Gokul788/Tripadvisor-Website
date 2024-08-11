@@ -1167,13 +1167,36 @@ figure{
       margin-top: 0;
       width: 160%;
     }
-  }
-
-    
   
+   .tap1 p:hover{
+    opacity: 0.8;
+
+   }
+   .tap2 p:hover{
+    opacity: 0.8;
+
+   }
+   .tap3 p:hover{
+    opacity: 0.8;
+
+   }
+   .tap4 p:hover{
+    opacity: 0.8;
+
+   }
+   .tap5 p:hover{
+    opacity: 0.8;
+
+   }
+    
+    
+ 
+  
+}
+
  
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width:1024px)  {
      .section-1{
         display: none;
     }
@@ -1193,6 +1216,7 @@ figure{
         
         
     }
+    
     .container-3{
         display: flex;
         flex-direction: row;
@@ -1206,8 +1230,7 @@ figure{
             padding-right: 18px;
             margin-left:  auto;
             margin-right: auto;
-            width: calc(var(--max-content-width) + var(--page-margin)* 2);
-            top: 40px;
+            
     
     }
     
@@ -1338,6 +1361,7 @@ figure{
     .footer_section-5 .f_sc-1:last-child{
       margin-left: 60px;
     }
+    
     }
 
 
@@ -1347,6 +1371,9 @@ figure{
         box-sizing: border-box;
         max-width: 100%;
         width: calc(var(--max-content-width) + var(--page-margin)* 2);
+    }
+    main,header{
+      margin-left:none;
     }
 
     .navbar{
@@ -1362,7 +1389,7 @@ figure{
     .container-2{
         box-sizing: border-box;
         width: 100%;
-        padding-left: 125px;
+        padding-left: 55px;
         padding-right: 18px;
         margin-left:  auto;
         margin-right: auto;
